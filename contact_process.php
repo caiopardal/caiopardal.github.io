@@ -1,21 +1,21 @@
 <?php
 
-    $to = "pardal.henrique@gmail.com";
+    $to = 'pardal.henrique@gmail.com';
     $from = $_REQUEST['email'];
     $name = $_REQUEST['name'];
-    $subject = $_REQUEST['subject'];
+    $csubject = $_REQUEST['subject'];
     $cmessage = $_REQUEST['message'];
 
     $headers = "From: $from";
-	$headers = "From: " . $from . "\r\n";
-	$headers .= "Reply-To: ". $from . "\r\n";
-	$headers .= "MIME-Version: 1.0\r\n";
-	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+		$headers = "From: " . $from . "\r\n";
+		$headers .= "Reply-To: ". $from . "\r\n";
+		$headers .= "MIME-Version: 1.0\r\n";
+		$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
     $subject = "Você possui uma nova mensagem do seu site!";
 
-    $logo = './img/member/member-1.jpg';
-    $link = '#';
+    $logo = './img/member/member-1.JPG';
+    $link = 'https://caiopardal.github.io/personal-page/';
 
 	$body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Email do Pardal</title></head><body>";
 	$body .= "<table style='width: 100%;'>";
@@ -31,6 +31,6 @@
 	$body .= "</tbody></table>";
 	$body .= "</body></html>";
 
-    $send = mail($to, $subject, $body, $headers);
+	$send = mail($to, $subject, $body, $headers);
 
 ?>
